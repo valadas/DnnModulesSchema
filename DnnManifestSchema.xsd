@@ -32,7 +32,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
-            <xs:attribute name="version" default="8.0" type="xs:decimal" use="required">
+            <xs:attribute name="version" default="8.0" type="xs:decimal" use="optional">
                 <xs:annotation>
                     <xs:documentation>
                         This is the Dnn version you are targetting, currently the Dnn installer does not use this variable but it is there for future use.
