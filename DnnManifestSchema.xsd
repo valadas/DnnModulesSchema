@@ -3,7 +3,8 @@
 <xs:schema
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     targetNamespace="https://raw.githubusercontent.com/valadas/DnnModulesSchema/master/DnnManifestSchema.xsd"
-    xmlns="https://raw.githubusercontent.com/valadas/DnnModulesSchema/master/DnnManifestSchema.xsd">
+    xmlns="https://raw.githubusercontent.com/valadas/DnnModulesSchema/master/DnnManifestSchema.xsd"
+    elementFormDefault="qualified">
     <xs:annotation>
         <xs:documentation>
             Schema for describing Dnn manifest files for extensions installation.
