@@ -2,6 +2,43 @@
 
 <xs:schema
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    targetNamespace="">
-
+    targetNamespace="https://raw.githubusercontent.com/valadas/DnnModulesSchema/master/DnnManifestSchema.xsd"
+    xmlns="https://raw.githubusercontent.com/valadas/DnnModulesSchema/master/DnnManifestSchema.xsd">
+    <xs:annotation>
+        <xs:documentation>
+            Schema for describing Dnn manifest files for extensions installation.
+        </xs:documentation>
+    </xs:annotation>
+    <xs:element name="dotnetnuke">
+        <xs:annotation>
+            <xs:documentation>
+                This is the root element of any dnn manifest.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:choice minOccurs="1" maxOccurs="1">
+                <xs:element name="packages">
+                    <xs:annotation>
+                        <xs:documentation>
+                            The packages node is required and can only be there once, it contains each package you want to install.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:choice>
+            <xs:attribute name="type" fixed="Package" use="required">
+                <xs:annotation>
+                    <xs:documentation>
+                        The type should always be "Package", other package types are legacy and should not be used.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="version" default="8.0" type="xs:decimal" use="required">
+                <xs:annotation>
+                    <xs:documentation>
+                        This is the Dnn version you are targetting, currently the Dnn installer does not use this variable but it is there for future use.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
 </xs:schema>
